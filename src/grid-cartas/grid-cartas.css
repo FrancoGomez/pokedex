@@ -1,0 +1,8 @@
+.grid-cartas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  height: max-content;
+  width: max-content;
+  margin: 0 auto;
+}
