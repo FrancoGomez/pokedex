@@ -7,15 +7,19 @@ const crearGridCartas = () => {
   $gridCartas.className = "grid-cartas";
   $gridCartas.id = "grid-cartas";
 
-  return $gridCartas;
+  $contenedorCartasPokemon.appendChild($gridCartas);
 };
 
-const crearPokemonEnGrid = (listaPokemon) => {
-  const $gridCartas = crearGridCartas();
+const crearPokemonEnGrid = async (cantidadPokemon) => {
+  const $gridCartas = document.querySelector("#grid-cartas");
 
-  listaPokemon.forEach((pokemon) => {
-    $gridCartas.appendChild(crearCartaPokemon(pokemon));
-  });
+  index = $gridCartas.childNodes.length;
 
-  $contenedorCartasPokemon.appendChild($gridCartas);
+  for (let i = 0; i < cantidadPokemon; i++) {
+    const pokemon = await (
+      await fetch(`https://pokeapi.co/api/v2/pokemon/${i + 1}`)
+    ).json();
+    const $carta = crearCartaPokemon(pokemon);
+    $gridCartas.appendChild($carta);
+  }
 };

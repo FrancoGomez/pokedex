@@ -11,12 +11,23 @@
       type="image/jpg"
       href="https://assets.pokemon.com/static2/_ui/img/favicon.ico"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="src/cartas/cartas.css" />
+    <link rel="stylesheet" href="src/cartas/parte-superior-carta/parte-superior-carta.css">
+    <link rel="stylesheet" href="src/cartas/parte-inferior-carta/parte-inferior-carta.css">
     <link rel="stylesheet" href="src/grid-cartas/grid-cartas.css" />
   </head>
   <body>
     <div class="contenedor-cartas-pokemon" id="contenedor-cartas-pokemon"></div>
 
+    <script src="src/cartas/parte-superior-carta/parte-superior-carta.js"></script>
+    <script src="src/cartas/parte-inferior-carta/parte-inferior-carta.js"></script>
     <script src="src/cartas/cartas.js"></script>
     <script src="src/grid-cartas/grid-cartas.js"></script>
     <script src="src/index.js"></script>

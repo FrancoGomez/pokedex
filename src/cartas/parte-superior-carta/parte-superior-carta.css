@@ -1,0 +1,42 @@
+.parte-superior-carta {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 67%;
+    width: 100%;
+    border-radius: 0.8rem 0.8rem 0 0;
+    background-color: transparent;
+  }
+  
+  .texto-id-pokemon {
+    position: absolute;
+    top: 16%;
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 1rem;
+    color: rgba(0, 0, 0, 0.25);
+  }
+  
+  .contenedor-imagen-pokemon {
+    position: absolute;
+    height: 175px;
+    width: 175px;
+    bottom: 0;
+  }
+  
+  .fondo-pokemon {
+    position: absolute;
+    height: 130px;
+    width: 130px;
+    bottom: 0.5rem;
+    left: 1rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+  }
+  
+  .imagen-pokemon {
+    position: absolute;
+    max-width: 100%;
+    height: auto;
+  }

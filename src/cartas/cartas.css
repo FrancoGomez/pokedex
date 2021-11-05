@@ -5,35 +5,3 @@
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
-
-.parte-superior-carta {
-  position: relative;
-  height: 65%;
-  width: 100%;
-  border-radius: 0.8rem 0.8rem 0 0;
-  background-color: rgb(240, 128, 48);
-}
-
-.id-pokemon {
-    position: absolute;
-    color: rgba(0, 0, 0, 0.3);
-}
-
-.contenedor-pokemon {
-    position: absolute;
-}
-
-.fondo-pokemon {
-    position: absolute;
-}
-
-.imagen-pokemon {
-    position: absolute;
-}
-
-.parte-inferior-carta {
-  height: 35%;
-  width: 100%;
-  border-radius: 0 0 0.8rem 0.8rem;
-  background-color: #fff;
-}

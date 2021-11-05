@@ -1,0 +1,27 @@
+.parte-inferior-carta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    height: 33%;
+    width: 100%;
+    border-radius: 0 0 0.8rem 0.8rem;
+    background-color: #fff;
+  }
+  
+  .nombre-pokemon {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  .contenedor-tipos-pokemon {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .tipo-pokemon {
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+  
