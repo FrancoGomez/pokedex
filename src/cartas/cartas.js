@@ -8,7 +8,7 @@ const colorTipos = {
   normal: "rgb(164, 172, 175)",
   psychic: "rgb(243, 102, 185)",
   steel: "rgb(158, 183, 184)",
-  dark: "rgb(112, 112, 112)",
+  dark: "rgb(72, 87, 91)",
   electric: "rgb(248, 208, 48)",
   fighting: "rgb(213, 103, 35)",
   flying: "rgb(61, 199, 239)",
@@ -24,7 +24,6 @@ const crearCartaPokemon = (pokemon) => {
   $carta.className = "carta";
 
   const colorPrimerTipo = colorTipos[pokemon.types[0].type.name];
-
   $carta.style.backgroundColor = colorPrimerTipo;
 
   $carta.appendChild(crearParteSuperiorCarta(pokemon.id));
@@ -32,5 +31,15 @@ const crearCartaPokemon = (pokemon) => {
     crearParteInferiorCarta(pokemon.species.name, pokemon.types)
   );
 
+  $carta.appendChild(crearEnvolvedorCarta(pokemon.id));
+
   return $carta;
+};
+
+const crearEnvolvedorCarta = (pokemonId) => {
+  const $envolvedorCarta = document.createElement("div");
+  $envolvedorCarta.className = "envolvedor-carta";
+  $envolvedorCarta.setAttribute("id", pokemonId);
+
+  return $envolvedorCarta;
 };

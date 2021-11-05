@@ -1,8 +1,16 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    font-family: 'Montserrat', sans-serif;
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.sin-scroll {
+  overflow: hidden;
+}
+
+.oculto {
+  display: none;
 }

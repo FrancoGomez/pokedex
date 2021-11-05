@@ -1,0 +1,37 @@
+.modal-informacion-pokemon__contenedor-informacion-grafica-pokemon {
+  height: max-content;
+  padding: 1rem;
+}
+
+.modal-informacion-pokemon__parrafo-id-pokemon {
+  font-weight: 600;
+}
+
+.modal-informacion-pokemon__parrafo-id-pokemon,
+.modal-informacion-pokemon__titulo-nombre-pokemon {
+  letter-spacing: 0.1rem;
+}
+
+.modal-informacion-pokemon__contenedor-imagen-pokemon {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-informacion-pokemon__titulo-nombre-pokemon-japones {
+  opacity: 0.7;
+  position: absolute;
+  top: 20%;
+  font-size: 60px;
+}
+
+.modal-informacion-pokemon__imagen-pokemon {
+  z-index: 1;
+}
+
+.modal-informacion-pokemon__imagen-pokemon {
+  height: auto;
+  width: 300px;
+}

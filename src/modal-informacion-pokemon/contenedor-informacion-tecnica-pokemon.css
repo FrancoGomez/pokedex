@@ -1,0 +1,5 @@
+.modal-informacion-pokemon__contenedor-informacion-tecnica-pokemon {
+  background-color: rgb(255, 255, 255);
+  height: 55%;
+  border-radius: 0.8rem 0.8rem 0 0;
+}
