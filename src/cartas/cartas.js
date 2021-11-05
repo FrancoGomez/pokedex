@@ -9,7 +9,7 @@ const colorTipos = {
   psychic: "rgb(243, 102, 185)",
   steel: "rgb(158, 183, 184)",
   dark: "rgb(112, 112, 112)",
-  electric: "rgb(238, 213, 53)",
+  electric: "rgb(248, 208, 48)",
   fighting: "rgb(213, 103, 35)",
   flying: "rgb(61, 199, 239)",
   grass: "rgb(155, 204, 80)",

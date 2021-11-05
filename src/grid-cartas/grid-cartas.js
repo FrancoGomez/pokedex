@@ -4,7 +4,7 @@ const $contenedorCartasPokemon = document.querySelector(
 
 const crearGridCartas = () => {
   const $gridCartas = document.createElement("div");
-  $gridCartas.className = "grid-cartas";
+  $gridCartas.className = "grid-cartas grid-columns";
   $gridCartas.id = "grid-cartas";
 
   $contenedorCartasPokemon.appendChild($gridCartas);
