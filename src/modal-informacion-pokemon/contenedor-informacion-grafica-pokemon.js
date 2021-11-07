@@ -1,4 +1,8 @@
-const crearContenedorInformacionGraficaPokemon = (pokemon, especiePokemon) => {
+const crearContenedorInformacionGraficaPokemon = (
+  pokemon,
+  especiePokemon,
+  $modalInformacionPokemon
+) => {
   const $contenedorInformacionGraficaPokemon = document.createElement("div");
   $contenedorInformacionGraficaPokemon.className =
     "modal-informacion-pokemon__contenedor-informacion-grafica-pokemon";
@@ -6,7 +10,16 @@ const crearContenedorInformacionGraficaPokemon = (pokemon, especiePokemon) => {
   const id = pokemon.id.toString().padStart(3, "0");
   const tipoPokemon = pokemon.types[0].type.name;
   const nombrePokemon = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
-  const nombrePokemonJapones = especiePokemon.names[9].name;
+  let nombrePokemonJapones = "";
+  especiePokemon.names.forEach((nombre) => {
+    if (nombre.language.name === "ja") {
+      nombrePokemonJapones = nombre.name;
+      return;
+    }
+  });
+  const colorFondoModal = colorTipos[pokemon.types[0].type.name];
+
+  $modalInformacionPokemon.style.backgroundColor = colorFondoModal;
 
   const $parrafoIdPokemon = crearParrafoIdPokemon(id, tipoPokemon);
   const $tituloNombrePokemon = crearTituloNombrePokemon(
@@ -16,7 +29,7 @@ const crearContenedorInformacionGraficaPokemon = (pokemon, especiePokemon) => {
   const $contenedorPokemon = crearContenedorPokemon(
     nombrePokemonJapones,
     tipoPokemon,
-    idPokemon
+    pokemon.id
   );
 
   $contenedorInformacionGraficaPokemon.appendChild($parrafoIdPokemon);
