@@ -4,6 +4,11 @@
 }
 
 body {
+  overflow: hidden;
+}
+
+body,
+button {
   font-family: "Montserrat", sans-serif;
 }
 

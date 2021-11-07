@@ -23,7 +23,7 @@ const colorTexto = {
   water: "white",
 };
 
-const idPokemon = 197;
+const idPokemon = Math.floor(Math.random() * 898);
 
 const mostrarInformacionPokemon = async (idPokemon) => {
   const pokemon = await (
@@ -34,9 +34,9 @@ const mostrarInformacionPokemon = async (idPokemon) => {
   ).json();
 
   const $contenedorInformacionGraficaPokemon =
-    crearContenedorInformacionGraficaPokemon(pokemon, especiePokemon);
+    crearContenedorInformacionGraficaPokemon(pokemon, especiePokemon, $modalInformacionPokemon);
   const $contenedorInformacionTecnicaPokemon =
-    crearContenedorInformacionTecnicaPokemon();
+    crearContenedorInformacionTecnicaPokemon(pokemon, especiePokemon);
 
   $modalInformacionPokemon.appendChild($contenedorInformacionGraficaPokemon);
   $modalInformacionPokemon.appendChild($contenedorInformacionTecnicaPokemon);
