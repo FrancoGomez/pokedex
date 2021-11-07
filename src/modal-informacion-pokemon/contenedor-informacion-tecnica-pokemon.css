@@ -1,5 +1,79 @@
 .modal-informacion-pokemon__contenedor-informacion-tecnica-pokemon {
   background-color: rgb(255, 255, 255);
-  height: 55%;
+  height: max-content;
   border-radius: 0.8rem 0.8rem 0 0;
+  padding: 2rem;
+}
+
+.modal-informacion-pokemon__lista-opciones-informacion {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.modal-informacion-pokemon__boton-seccion {
+  background-color: transparent;
+  font-size: 1rem;
+  border: none;
+  padding-bottom: 1rem;
+}
+
+.modal-informacion-pokemon__boton-seccion {
+  cursor: pointer;
+}
+
+.modal-informacion-pokemon__boton-seccion--seleccionado {
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-bottom: 3px solid red;
+  padding-bottom: 1rem;
+}
+
+.modal-informacion-pokemon__contenedor-pokemon-data {
+  padding-top: 2rem;
+}
+
+.descripcion-pokemon {
+  opacity: 0.7;
+}
+
+.titulo-elemento,
+.data-elemento-parrafo,
+.data-elemento {
+  width: 50%;
+}
+
+.titulo-pokemon-data,
+.descripcion-pokemon,
+.lista-data-pokemon,
+.elementoDataPokemon {
+  padding: 0.5rem 0;
+}
+
+.descripcion-pokemon,
+.lista-data-pokemon,
+.elementoDataPokemon {
+  font-size: 1rem;
+}
+
+.elementoDataPokemon {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+}
+
+.titulo-elemento {
+  font-size: 1rem;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.data-elemento {
+  list-style: none;
+}
+
+.item-data-elemento {
+  margin-bottom: 0.5rem;
 }
