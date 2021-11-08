@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="index.css" />
@@ -38,10 +38,12 @@
       rel="stylesheet"
       href="src/modal-informacion-pokemon/contenedor-biografia-pokemon.css"
     />
+    <link rel="stylesheet" href="src/modal-informacion-pokemon/contenedor-stats.css">
+    <link rel="stylesheet" href="src/modal-informacion-pokemon/contenedor-evolucion.css">
   </head>
   <body class="">
     <div class="contenedor-cartas-pokemon" id="contenedor-cartas-pokemon"></div>
-    <div class="modal-informacion-pokemon" id="modal-informacion-pokemon"></div>
+    <div class="modal-informacion-pokemon oculto" id="modal-informacion-pokemon"></div>
 
     <script
       type="text/javascript"
@@ -51,6 +53,8 @@
       type="text/javascript"
       src="src/modal-informacion-pokemon/contenedor-biografia-pokemon.js"
     ></script>
+    <script src="src/modal-informacion-pokemon/contenedor-stats.js"></script>
+    <script src="src/modal-informacion-pokemon/contenedor-evolucion.js"></script>
     <script
       type="text/javascript"
       src="src/modal-informacion-pokemon/contenedor-informacion-tecnica-pokemon.js"

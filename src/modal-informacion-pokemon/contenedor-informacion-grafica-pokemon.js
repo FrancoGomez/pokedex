@@ -1,3 +1,5 @@
+const $modalPokemon = document.querySelector("#modal-informacion-pokemon");
+
 const crearContenedorInformacionGraficaPokemon = (
   pokemon,
   especiePokemon,
@@ -21,6 +23,7 @@ const crearContenedorInformacionGraficaPokemon = (
 
   $modalInformacionPokemon.style.backgroundColor = colorFondoModal;
 
+  const $botonAtras = crearBotonAtras(tipoPokemon);
   const $parrafoIdPokemon = crearParrafoIdPokemon(id, tipoPokemon);
   const $tituloNombrePokemon = crearTituloNombrePokemon(
     nombrePokemon,
@@ -32,11 +35,37 @@ const crearContenedorInformacionGraficaPokemon = (
     pokemon.id
   );
 
-  $contenedorInformacionGraficaPokemon.appendChild($parrafoIdPokemon);
-  $contenedorInformacionGraficaPokemon.appendChild($tituloNombrePokemon);
+  $contenedorInformacionGraficaPokemon.appendChild($botonAtras);
   $contenedorInformacionGraficaPokemon.appendChild($contenedorPokemon);
+  $contenedorInformacionGraficaPokemon.appendChild($tituloNombrePokemon);
+  $contenedorInformacionGraficaPokemon.appendChild($parrafoIdPokemon);
 
   return $contenedorInformacionGraficaPokemon;
+};
+
+const crearBotonAtras = (tipoPokemon) => {
+  const $botonAtras = document.createElement("button");
+  $botonAtras.className = "modal__boton-atras";
+  $botonAtras.innerText = "Go back";
+  $botonAtras.style.color = colorTexto[tipoPokemon];
+
+  $botonAtras.onclick = () => {
+    $modalPokemon.childNodes[0].remove();
+    $modalPokemon.childNodes[0].remove();
+    $modalPokemon.className += " oculto";
+
+    elegido = "biography";
+
+    estado.biography = true;
+    estado.stats = false;
+    estado.evolutions = false;
+
+    const $contenedor = document.querySelector("#contenedor-cartas-pokemon");
+
+    $contenedor.className = $contenedor.className.replace(" oculto", "");
+  };
+
+  return $botonAtras;
 };
 
 const crearParrafoIdPokemon = (id, tipoPokemon) => {

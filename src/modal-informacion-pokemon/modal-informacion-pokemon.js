@@ -23,8 +23,6 @@ const colorTexto = {
   water: "white",
 };
 
-const idPokemon = Math.floor(Math.random() * 898);
-
 const mostrarInformacionPokemon = async (idPokemon) => {
   const pokemon = await (
     await fetch(`https://pokeapi.co/api/v2/pokemon/${idPokemon}`)
@@ -34,12 +32,14 @@ const mostrarInformacionPokemon = async (idPokemon) => {
   ).json();
 
   const $contenedorInformacionGraficaPokemon =
-    crearContenedorInformacionGraficaPokemon(pokemon, especiePokemon, $modalInformacionPokemon);
+    await crearContenedorInformacionGraficaPokemon(
+      pokemon,
+      especiePokemon,
+      $modalInformacionPokemon
+    );
   const $contenedorInformacionTecnicaPokemon =
-    crearContenedorInformacionTecnicaPokemon(pokemon, especiePokemon);
+    await crearContenedorInformacionTecnicaPokemon(pokemon, especiePokemon);
 
   $modalInformacionPokemon.appendChild($contenedorInformacionGraficaPokemon);
   $modalInformacionPokemon.appendChild($contenedorInformacionTecnicaPokemon);
 };
-
-mostrarInformacionPokemon(idPokemon);

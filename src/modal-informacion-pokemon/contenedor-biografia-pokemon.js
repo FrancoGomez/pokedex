@@ -1,4 +1,4 @@
-const crearContenedorPokemonData = (pokemon, especiePokemon) => {
+const crearContenedorBiografia = (pokemon, especiePokemon) => {
   const dataPokemon = {
     Species: especiePokemon.genera[7].genus.replace(" Pokémon", ""),
     Height: `${pokemon.height / 10}m`,
@@ -17,6 +17,7 @@ const crearContenedorPokemonData = (pokemon, especiePokemon) => {
   const $contenedorPokemonData = document.createElement("div");
   $contenedorPokemonData.className =
     "modal-informacion-pokemon__contenedor-pokemon-data";
+  $contenedorPokemonData.setAttribute("id", "biographyInfo");
 
   const $tituloPokemonData = document.createElement("h4");
   $tituloPokemonData.className = "titulo-pokemon-data";
@@ -80,5 +81,5 @@ const crearContenedorPokemonData = (pokemon, especiePokemon) => {
   $contenedorPokemonData.appendChild($descripcionPokemon);
   $contenedorPokemonData.appendChild($listaDataPokemon);
 
-  return $contenedorPokemonData
+  return $contenedorPokemonData;
 };

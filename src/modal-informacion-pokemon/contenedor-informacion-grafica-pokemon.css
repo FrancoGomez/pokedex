@@ -11,6 +11,8 @@
 .modal-informacion-pokemon__titulo-nombre-pokemon {
   letter-spacing: 0.1rem;
   opacity: 0.75;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .modal-informacion-pokemon__contenedor-imagen-pokemon {
@@ -19,13 +21,14 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  height: 400px;
+  height: 350px;
+  margin-bottom: 2rem;
 }
 
 .modal-informacion-pokemon__titulo-nombre-pokemon-japones {
   opacity: 0.7;
   position: absolute;
-  top: 18%;
+  top: 8%;
   font-size: 60px;
 }
 
@@ -36,4 +39,17 @@
 .modal-informacion-pokemon__imagen-pokemon {
   height: auto;
   width: 300px;
+}
+
+.modal__boton-atras {
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: 600;
+  opacity: 0.7;
+  margin: 1rem 0 0 1rem;
+}
+
+.modal__boton-atras:hover {
+  cursor: pointer;
 }

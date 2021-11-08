@@ -1,6 +1,6 @@
 crearGridCartas()
 
-crearPokemonEnGrid(25);
+crearPokemonEnGrid(898);
 
 /* window.onscroll = () => {
     const distanciaScrolleada = document.documentElement.scrollTop
@@ -9,6 +9,6 @@ crearPokemonEnGrid(25);
     if(distanciaScrolleada === alturaPagina) {
         setTimeout(() => {
             crearPokemonEnGrid(6);
-        }, 500)
+        }, 250)
     }
 } */

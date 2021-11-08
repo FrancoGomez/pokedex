@@ -10,7 +10,11 @@ const crearGridCartas = () => {
   $contenedorCartasPokemon.appendChild($gridCartas);
 
   $gridCartas.onclick = (evento) => {
-    console.log(evento.target);
+    const $modalPokemon = document.querySelector("#modal-informacion-pokemon");
+    $modalPokemon.className = $modalPokemon.className.replace(" oculto", "");
+    mostrarInformacionPokemon(evento.target.id);
+
+    document.querySelector("#contenedor-cartas-pokemon").className += ' oculto';
   };
 };
 
