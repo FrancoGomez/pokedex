@@ -1,17 +1,17 @@
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body,
 button {
-  font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 .sin-scroll {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .oculto {
-  display: none;
+    display: none;
 }

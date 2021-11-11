@@ -1,47 +1,41 @@
-const crearParteSuperiorCarta = (pokemonId) => {
-  const $parteSuperiorCarta = document.createElement("div");
-  $parteSuperiorCarta.className = "parte-superior-carta";
+const crearParteSuperiorCarta = (pokemonId, primerTipo) => {
+    const $parteSuperiorCarta = returnElement("div", "parte-superior-carta");
 
-  $parteSuperiorCarta.appendChild(crearTextoIdPokemon(pokemonId));
-  $parteSuperiorCarta.appendChild(crearContenedorImagenPokemon(pokemonId));
+    $parteSuperiorCarta.appendChild(crearTextoIdPokemon(pokemonId, primerTipo));
+    $parteSuperiorCarta.appendChild(crearContenedorImagenPokemon(pokemonId));
 
-  return $parteSuperiorCarta;
+    return $parteSuperiorCarta;
 };
 
-const crearTextoIdPokemon = (pokemonId) => {
-  const $textoIdPokemon = document.createElement("p");
+const crearTextoIdPokemon = (pokemonId, primerTipo) => {
+    const displayedId = pokemonId.toString().padStart(3, "0");
+    const textColor = colorTexto[primerTipo];
 
-  const id = pokemonId.toString().padStart(3, "0");
+    const $textoIdPokemon = returnElement(
+        "p",
+        "texto-id-pokemon",
+        false,
+        `#${displayedId}`,
+        textColor
+    );
 
-  $textoIdPokemon.innerText = `#${id}`;
-  $textoIdPokemon.className = "texto-id-pokemon";
-
-  return $textoIdPokemon;
+    return $textoIdPokemon;
 };
 
 const crearContenedorImagenPokemon = (pokemonId) => {
-  const $contenedorImagenPokemon = document.createElement("div");
-  $contenedorImagenPokemon.className = "contenedor-imagen-pokemon";
+    const $contenedorImagenPokemon = returnElement(
+        "div",
+        "contenedor-imagen-pokemon"
+    );
+    const $backgroundPokemon = returnElement("div", "fondo-pokemon");
+    const $pokemonImage = returnImage(
+        "imagen-pokemon",
+        false,
+        getPokemonImage(pokemonId)
+    );
 
-  $contenedorImagenPokemon.appendChild(crearFondoPokemon());
-  $contenedorImagenPokemon.appendChild(crearImagenPokemon(pokemonId));
+    $contenedorImagenPokemon.appendChild($backgroundPokemon);
+    $contenedorImagenPokemon.appendChild($pokemonImage);
 
-  return $contenedorImagenPokemon;
-};
-
-const crearFondoPokemon = () => {
-  const $fondoPokemon = document.createElement("div");
-  $fondoPokemon.className = "fondo-pokemon";
-
-  return $fondoPokemon;
-};
-
-const crearImagenPokemon = (pokemonId) => {
-  const $imagenPokemon = document.createElement("img");
-  const imagenUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${pokemonId}.png`;
-
-  $imagenPokemon.src = imagenUrl;
-  $imagenPokemon.className = "imagen-pokemon";
-
-  return $imagenPokemon;
+    return $contenedorImagenPokemon;
 };

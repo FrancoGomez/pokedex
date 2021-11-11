@@ -1,45 +1,19 @@
-const $modalInformacionPokemon = document.querySelector(
-  "#modal-informacion-pokemon"
-);
-
-const colorTexto = {
-  bug: "white",
-  dragon: "white",
-  fairy: "black",
-  fire: "white",
-  ghost: "white",
-  ground: "black",
-  normal: "black",
-  psychic: "white",
-  steel: "black",
-  dark: "white",
-  electric: "black",
-  fighting: "white",
-  flying: "black",
-  grass: "black",
-  ice: "black",
-  poison: "white",
-  rock: "white",
-  water: "white",
-};
-
 const mostrarInformacionPokemon = async (idPokemon) => {
-  const pokemon = await (
-    await fetch(`https://pokeapi.co/api/v2/pokemon/${idPokemon}`)
-  ).json();
-  const especiePokemon = await (
-    await fetch(`https://pokeapi.co/api/v2/pokemon-species/${idPokemon}`)
-  ).json();
+    const pokemonUrl = `https://pokeapi.co/api/v2/pokemon/${idPokemon}`;
+    const especiePokemonUrl = `https://pokeapi.co/api/v2/pokemon-species/${idPokemon}`;
 
-  const $contenedorInformacionGraficaPokemon =
-    await crearContenedorInformacionGraficaPokemon(
-      pokemon,
-      especiePokemon,
-      $modalInformacionPokemon
-    );
-  const $contenedorInformacionTecnicaPokemon =
-    await crearContenedorInformacionTecnicaPokemon(pokemon, especiePokemon);
+    const pokemon = await (await fetch(pokemonUrl)).json();
+    const especiePokemon = await (await fetch(especiePokemonUrl)).json();
 
-  $modalInformacionPokemon.appendChild($contenedorInformacionGraficaPokemon);
-  $modalInformacionPokemon.appendChild($contenedorInformacionTecnicaPokemon);
+    const $contenedorInformacionGraficaPokemon =
+        crearContenedorInformacionGraficaPokemon(
+            pokemon,
+            especiePokemon,
+            $modalPokemon
+        );
+    const $contenedorInformacionTecnicaPokemon =
+        await crearContenedorInformacionTecnicaPokemon(pokemon, especiePokemon);
+
+    $modalPokemon.appendChild($contenedorInformacionGraficaPokemon);
+    $modalPokemon.appendChild($contenedorInformacionTecnicaPokemon);
 };

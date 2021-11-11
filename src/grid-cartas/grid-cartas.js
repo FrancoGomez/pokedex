@@ -1,35 +1,31 @@
-const $contenedorCartasPokemon = document.querySelector(
-  "#contenedor-cartas-pokemon"
-);
-
 const crearGridCartas = () => {
-  const $gridCartas = document.createElement("div");
-  $gridCartas.className = "grid-cartas grid-columns";
-  $gridCartas.id = "grid-cartas";
+    const $gridCartas = returnElement("div", "grid-cartas", "grid-cartas");
 
-  $contenedorCartasPokemon.appendChild($gridCartas);
+    $contenedorCartasPokemon.appendChild($gridCartas);
 
-  $gridCartas.onclick = (evento) => {
-    const $modalPokemon = document.querySelector("#modal-informacion-pokemon");
-    $modalPokemon.className = $modalPokemon.className.replace(" oculto", "");
-    mostrarInformacionPokemon(evento.target.id);
+    $gridCartas.onclick = (evento) => {
+        const pokemonId = evento.target.id;
 
-    document.querySelector("#contenedor-cartas-pokemon").className += ' oculto';
-  };
+        $modalPokemon.className = $modalPokemon.className.replace(
+            " oculto",
+            ""
+        );
+        mostrarInformacionPokemon(pokemonId);
+
+        $contenedorCartasPokemon.className += " oculto";
+    };
 };
 
 const crearPokemonEnGrid = async (cantidadPokemon) => {
-  const $gridCartas = document.querySelector("#grid-cartas");
+    const $gridCartas = document.querySelector("#grid-cartas");
 
-  index = $gridCartas.childNodes.length;
+    for (let i = 0; i < cantidadPokemon; i++) {
+        const pokemonId = i + 1;
+        const pokemonUrl = `https://pokeapi.co/api/v2/pokemon/${pokemonId}`;
 
-  for (let i = 0; i < cantidadPokemon; i++) {
-    const idPokemon = i + 1;
+        const pokemon = await (await fetch(pokemonUrl)).json();
+        const $carta = crearCartaPokemon(pokemon);
 
-    const pokemon = await (
-      await fetch(`https://pokeapi.co/api/v2/pokemon/${idPokemon}`)
-    ).json();
-    const $carta = crearCartaPokemon(pokemon);
-    $gridCartas.appendChild($carta);
-  }
+        $gridCartas.appendChild($carta);
+    }
 };

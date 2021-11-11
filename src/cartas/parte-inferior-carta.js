@@ -1,45 +1,34 @@
-const crearParteInferiorCarta = (nombre, tipos) => {
-  const $parteInferiorCarta = document.createElement("div");
-  $parteInferiorCarta.className = "parte-inferior-carta";
+const crearParteInferiorCarta = (name, types) => {
+    const $parteInferiorCarta = returnElement("div", "parte-inferior-carta");
+    const $pokemonName = returnElement("h2", "nombre-pokemon", false, name);
+    const $pokemonTypes = crearParrafoTipos(types);
 
-  $parteInferiorCarta.appendChild(crearNombrePokemon(nombre));
-  $parteInferiorCarta.appendChild(crearParrafoTipos(tipos));
+    $parteInferiorCarta.appendChild($pokemonName);
+    $parteInferiorCarta.appendChild($pokemonTypes);
 
-  return $parteInferiorCarta;
-};
-
-const crearParrafo = (texto, color) => {
-  const $tipoPokemon = document.createElement("p");
-  $tipoPokemon.innerText = texto.toUpperCase();
-  $tipoPokemon.className = "tipo-pokemon";
-  $tipoPokemon.style.color = color;
-
-  return $tipoPokemon;
-};
-
-const crearNombrePokemon = (nombre) => {
-  const $nombrePokemon = document.createElement("h2");
-
-  const nombreConPrimeraMayuscula = nombre[0].toUpperCase() + nombre.slice(1);
-
-  $nombrePokemon.innerText = nombreConPrimeraMayuscula;
-  $nombrePokemon.className = "nombre-pokemon";
-
-  return $nombrePokemon;
+    return $parteInferiorCarta;
 };
 
 const crearParrafoTipos = (tipos) => {
-  const $contenedorTiposPokemon = document.createElement("div");
-  $contenedorTiposPokemon.className = "contenedor-tipos-pokemon";
-
-  tipos.forEach((tipo) => {
-    const tipoPokemon = tipo.type.name;
-    const colorPokemon = colorTipos[tipo.type.name];
-
-    $contenedorTiposPokemon.appendChild(
-      crearParrafo(tipoPokemon, colorPokemon)
+    const $contenedorTiposPokemon = returnElement(
+        "div",
+        "contenedor-tipos-pokemon"
     );
-  });
 
-  return $contenedorTiposPokemon;
+    for (const tipo of tipos) {
+        const pokemonType = tipo.type.name;
+        const pokemonColor = colorTipos[pokemonType];
+
+        const $typeParagraph = returnElement(
+            "p",
+            "tipo-pokemon",
+            false,
+            pokemonType.toUpperCase(),
+            pokemonColor
+        );
+
+        $contenedorTiposPokemon.appendChild($typeParagraph);
+    }
+
+    return $contenedorTiposPokemon;
 };

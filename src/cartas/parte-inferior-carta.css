@@ -8,20 +8,20 @@
     width: 100%;
     border-radius: 0 0 0.8rem 0.8rem;
     background-color: #fff;
-  }
-  
-  .nombre-pokemon {
+}
+
+.nombre-pokemon {
     font-size: 2rem;
     font-weight: 600;
-  }
-  
-  .contenedor-tipos-pokemon {
+    text-transform: capitalize;
+}
+
+.contenedor-tipos-pokemon {
     display: flex;
     gap: 1.5rem;
-  }
-  
-  .tipo-pokemon {
+}
+
+.tipo-pokemon {
     font-weight: 700;
     font-size: 0.9rem;
-  }
-  
+}

@@ -1,42 +1,43 @@
 .descripcion-pokemon {
-  opacity: 0.7;
+    opacity: 0.7;
 }
 
 .titulo-elemento,
 .data-elemento-parrafo,
 .data-elemento {
-  width: 50%;
+    width: 50%;
 }
 
 .titulo-pokemon-data,
 .descripcion-pokemon,
 .lista-data-pokemon,
-.elementoDataPokemon {
-  padding: 0.5rem 0;
+.elemento-data-pokemon {
+    padding: 0.5rem 0;
 }
 
 .descripcion-pokemon,
 .lista-data-pokemon,
-.elementoDataPokemon {
-  font-size: 1rem;
+.elemento-data-pokemon {
+    font-size: 1rem;
 }
 
-.elementoDataPokemon {
-  display: flex;
-  justify-content: space-between;
-  align-items: top;
+.elemento-data-pokemon {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
 }
 
 .titulo-elemento {
-  font-size: 1rem;
-  font-weight: 600;
-  opacity: 0.7;
+    font-size: 1rem;
+    font-weight: 600;
+    opacity: 0.7;
 }
 
 .data-elemento {
-  list-style: none;
+    list-style: none;
 }
 
 .item-data-elemento {
-  margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
 }

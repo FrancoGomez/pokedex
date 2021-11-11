@@ -1,81 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pokedex</title>
-    <!-- Favicon sacado de https://www.pokemon.com/us/pokedex/ -->
-    <link
-      rel="shortcur icon"
-      type="image/jpg"
-      href="https://assets.pokemon.com/static2/_ui/img/favicon.ico"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="src/cartas/cartas.css" />
-    <link rel="stylesheet" href="src/cartas/parte-superior-carta.css" />
-    <link rel="stylesheet" href="src/cartas/parte-inferior-carta.css" />
-    <link rel="stylesheet" href="src/grid-cartas/grid-cartas.css" />
-    <link
-      rel="stylesheet"
-      href="src/modal-informacion-pokemon/modal-informacion-pokemon.css"
-    />
-    <link
-      rel="stylesheet"
-      href="src/modal-informacion-pokemon/contenedor-informacion-grafica-pokemon.css"
-    />
-    <link
-      rel="stylesheet"
-      href="src/modal-informacion-pokemon/contenedor-informacion-tecnica-pokemon.css"
-    />
-    <link
-      rel="stylesheet"
-      href="src/modal-informacion-pokemon/contenedor-biografia-pokemon.css"
-    />
-    <link rel="stylesheet" href="src/modal-informacion-pokemon/contenedor-stats.css">
-    <link rel="stylesheet" href="src/modal-informacion-pokemon/contenedor-evolucion.css">
-  </head>
-  <body class="">
-    <div class="contenedor-cartas-pokemon" id="contenedor-cartas-pokemon"></div>
-    <div class="modal-informacion-pokemon oculto" id="modal-informacion-pokemon"></div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pokedex</title>
+        <!-- Favicon sacado de https://www.pokemon.com/us/pokedex/ -->
+        <link
+            rel="shortcur icon"
+            type="image/jpg"
+            href="https://assets.pokemon.com/static2/_ui/img/favicon.ico"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="index.css" />
+        <link rel="stylesheet" href="src/cartas/cartas.css" />
+        <link rel="stylesheet" href="src/cartas/parte-superior-carta.css" />
+        <link rel="stylesheet" href="src/cartas/parte-inferior-carta.css" />
+        <link rel="stylesheet" href="src/grid-cartas/grid-cartas.css" />
+        <link
+            rel="stylesheet"
+            href="src/modal-informacion-pokemon/modal-informacion-pokemon.css"
+        />
+        <link
+            rel="stylesheet"
+            href="src/modal-informacion-pokemon/contenedor-informacion-grafica-pokemon.css"
+        />
+        <link
+            rel="stylesheet"
+            href="src/modal-informacion-pokemon/contenedor-informacion-tecnica-pokemon.css"
+        />
+        <link
+            rel="stylesheet"
+            href="src/modal-informacion-pokemon/contenedor-biografia-pokemon.css"
+        />
+        <link
+            rel="stylesheet"
+            href="src/modal-informacion-pokemon/contenedor-stats.css"
+        />
+        <link
+            rel="stylesheet"
+            href="src/modal-informacion-pokemon/contenedor-evolucion.css"
+        />
+    </head>
+    <body class="">
+        <div
+            class="contenedor-cartas-pokemon"
+            id="contenedor-cartas-pokemon"
+        ></div>
+        <div
+            class="modal-informacion-pokemon oculto"
+            id="modal-informacion-pokemon"
+        ></div>
 
-    <script
-      type="text/javascript"
-      src="src/modal-informacion-pokemon/contenedor-informacion-grafica-pokemon.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="src/modal-informacion-pokemon/contenedor-biografia-pokemon.js"
-    ></script>
-    <script src="src/modal-informacion-pokemon/contenedor-stats.js"></script>
-    <script src="src/modal-informacion-pokemon/contenedor-evolucion.js"></script>
-    <script
-      type="text/javascript"
-      src="src/modal-informacion-pokemon/contenedor-informacion-tecnica-pokemon.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="src/cartas/parte-superior-carta.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="src/cartas/parte-inferior-carta.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="src/modal-informacion-pokemon/modal-informacion-pokemon.js"
-    ></script>
-    <script type="text/javascript" src="src/cartas/cartas.js"></script>
-    <script
-      type="text/javascript"
-      src="src/grid-cartas/grid-cartas.js"
-    ></script>
-    <script type="text/javascript" src="src/index.js"></script>
-  </body>
+        <script src="src/utilidades/utilidades.js"></script>
+        <script
+            type="text/javascript"
+            src="src/modal-informacion-pokemon/contenedor-informacion-grafica-pokemon.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="src/modal-informacion-pokemon/contenedor-biografia-pokemon.js"
+        ></script>
+        <script src="src/modal-informacion-pokemon/contenedor-stats.js"></script>
+        <script src="src/modal-informacion-pokemon/contenedor-evolucion.js"></script>
+        <script
+            type="text/javascript"
+            src="src/modal-informacion-pokemon/contenedor-informacion-tecnica-pokemon.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="src/cartas/parte-superior-carta.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="src/cartas/parte-inferior-carta.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="src/modal-informacion-pokemon/modal-informacion-pokemon.js"
+        ></script>
+        <script type="text/javascript" src="src/cartas/cartas.js"></script>
+        <script
+            type="text/javascript"
+            src="src/grid-cartas/grid-cartas.js"
+        ></script>
+        <script type="text/javascript" src="src/index.js"></script>
+    </body>
 </html>
